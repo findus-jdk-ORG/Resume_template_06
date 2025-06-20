@@ -1,0 +1,144 @@
+{
+    "site": {
+        "title": "Disum Portfolio",
+        "description": "Senior Product Designer Portfolio"
+    },
+    "navigation": [
+        {
+            "text": "Home",
+            "link": "home"
+        },
+        {
+            "text": "About",
+            "link": "about"
+        },
+        {
+            "text": "Portfolio",
+            "link": "portfolio"
+        },
+        {
+            "text": "Contact",
+            "link": "contact"
+        }
+    ],
+    "hero": {
+        "greeting": "Hi, I'm",
+        "name": "Werner Disum",
+        "title": "Senior Product Designer",
+        "cta": "View My Work",
+        "image": "./assets/profile-img.jpg"
+    },
+    "about": {
+        "title": "About",
+        "titleHighlight": "Me",
+        "description": "I'm a passionate Senior Product Designer dedicated to crafting exceptional user experiences. My journey in design began 12 years ago, and since then I've had the privilege of working with startups, Fortune 500 companies, and everything in between.",
+        "skillsTitle": "My Skills",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "imageAlt": "Design Process"
+    },
+    "skills": [
+        {
+            "name": "UI/UX Design",
+            "level": 95
+        },
+        {
+            "name": "User Research",
+            "level": 90
+        },
+        {
+            "name": "Prototyping",
+            "level": 92
+        },
+        {
+            "name": "Design Systems",
+            "level": 88
+        },
+        {
+            "name": "Interaction Design",
+            "level": 93
+        },
+        {
+            "name": "Visual Design",
+            "level": 96
+        }
+    ],
+    "portfolio": {
+        "title": "My",
+        "titleHighlight": "Work",
+        "description": "Explore my latest creative work across different domains"
+    },
+    "projects": [
+        {
+            "title": "Luxury E-commerce",
+            "description": "A high-end fashion platform with immersive product showcases and AR try-on features.",
+            "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+            "category": "Web",
+            "tech": ["Figma", "WebGL", "React"],
+            "link": "#"
+        },
+        {
+            "title": "FitTrack Pro",
+            "description": "AI-powered fitness coaching app with real-time form correction and personalized plans.",
+            "image": "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "category": "App",
+            "tech": ["SwiftUI", "CoreML", "HealthKit"],
+            "link": "#"
+        },
+        {
+            "title": "Orbit Speaker",
+            "description": "Voice-controlled smart speaker with adaptive lighting and spatial audio.",
+            "image": "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "category": "Product",
+            "tech": ["Fusion 360", "Keyshot", "Arduino"],
+            "link": "#"
+        }
+    ],
+    "contact": {
+        "title": "Get In",
+        "titleHighlight": "Touch",
+        "info": [
+            {
+                "icon": "fas fa-envelope",
+                "title": "Email",
+                "value": "disum98@gmail.com"
+            },
+            {
+                "icon": "fas fa-phone",
+                "title": "Phone",
+                "value": "+91 9825000000"
+            },
+            {
+                "icon": "fas fa-map-marker-alt",
+                "title": "Location",
+                "value": "Bhavnagar, Gujarat, India"
+            }
+        ],
+        "form": {
+            "namePlaceholder": "Your Name",
+            "emailPlaceholder": "Your Email",
+            "messagePlaceholder": "Your Message",
+            "buttonText": "Send Message"
+        }
+    },
+    "socialLinks": [
+        {
+            "icon": "fab fa-dribbble",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-behance",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-linkedin-in",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-github",
+            "url": "#"
+        }
+    ],
+    "footer": {
+        "copyrightText": "All rights reserved"
+    }
+}
