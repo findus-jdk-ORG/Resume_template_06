@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Load all data from JSON
     fetch('data.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             renderPortfolio(data);
+            // Initialize functionality after rendering
             initFunctionality();
         })
         .catch(error => console.error('Error loading data:', error));
 
     function renderPortfolio(data) {
         const app = document.getElementById('app');
+        if (!app) return; // Safety check
         
         // Render navigation
         app.innerHTML = `
@@ -163,10 +170,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -183,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     
                     // Close mobile menu if open
-                    if (navLinks.classList.contains('active')) {
+                    if (navLinks && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
                         hamburger.classList.remove('active');
                     }
@@ -195,28 +204,30 @@ document.addEventListener('DOMContentLoaded', function() {
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                        }, 50);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
+        if (filterBtns.length && projectCards.length) {
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
                 });
             });
-        });
+        }
 
         // Animation on scroll
         const animateOnScroll = function() {
